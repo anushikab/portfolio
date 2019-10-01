@@ -1,0 +1,553 @@
+/**** General styles ****/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #505050;
+    font: 16px "Roboto", sans-serif;
+    margin: 0;
+    background: #edf6ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: right;
+    color: #fafafa;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    color: #fafafa;
+    padding-left: 50px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 15px 15px 5px 15px;
+}
+
+img {
+    border: 0;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #00b2ca;
+}
+
+p {
+    margin: 0 15px 10px;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/**** Header ****/
+header {
+    background: #00bcd4;
+    margin-bottom: 5px;
+    padding: 20px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.logo {
+    width: 80px;
+    border-radius: 100px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+/**** Main ****/
+.title {
+    font-size: 30px;
+    color: #333;
+    padding: 30px 5px 0;
+    letter-spacing: 1.5px;
+    margin-left: 0;
+}
+
+article {
+    text-align: left;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/**** Footer ****/
+footer {
+    background: #212121;
+    padding: 50px 0 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+    color: #fafafa;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.email {
+    color: #fafafa;
+}
+
+.social {
+    text-align: left;
+}
+
+.social-link {
+    padding: 0px 15px;
+    color: #fafafa;
+}
+
+/**** Back to top button ****/
+/* Copyright for the back-to-top button goes to http://codyhouse.co/gem/back-to-top/ */
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #006064 url(../img/cd-top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+    opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+    background-color: #006064;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-top {
+        right: 20px;
+        bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+/**** Grid ****/
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Column is the default, for the mobile version */
+/* The responsive styles will be tablet > small laptop > big laptop/pc; which will be named small > medium > large */
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5,
+.column-6,
+.column-7,
+.column-8,
+.column-9,
+.column-10,
+.column-11,
+.column-12 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.column-12 {
+    width: 100%;
+}
+
+.column-11 {
+    width: 91.66666667%;
+}
+
+.column-10 {
+    width: 83.33333333%;
+}
+
+.column-9 {
+    width: 75%;
+}
+
+.column-8 {
+    width: 66.66666667%;
+}
+
+.column-7 {
+    width: 58.33333333%;
+}
+
+.column-6 {
+    width: 50%;
+}
+
+.column-5 {
+    width: 41.66666667%;
+}
+
+.column-4 {
+    width: 33.33333333%;
+}
+
+.column-3 {
+    width: 25%;
+}
+
+.column-2 {
+    width: 16.66666667%;
+}
+
+.column-1 {
+    width: 8.33333333%;
+}
+
+@media (min-width: 768px) {
+    .small-1,
+    .small-2,
+    .small-3,
+    .small-4,
+    .small-5,
+    .small-6,
+    .small-7,
+    .small-8,
+    .small-9,
+    .small-10,
+    .small-11,
+    .small-12 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .small-12 {
+        width: 100%;
+    }
+
+    .small-11 {
+        width: 91.66666667%;
+    }
+
+    .small-10 {
+        width: 83.33333333%;
+    }
+
+    .small-9 {
+        width: 75%;
+    }
+
+    .small-8 {
+        width: 66.66666667%;
+    }
+
+    .small-7 {
+        width: 58.33333333%;
+    }
+
+    .small-6 {
+        width: 50%;
+    }
+
+    .small-5 {
+        width: 41.66666667%;
+    }
+
+    .small-4 {
+        width: 33.33333333%;
+    }
+
+    .small-3 {
+        width: 25%;
+    }
+
+    .small-2 {
+        width: 16.66666667%;
+    }
+
+    .small-1 {
+        width: 8.33333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .medium-1,
+    .medium-2,
+    .medium-3,
+    .medium-4,
+    .medium-5,
+    .medium-6,
+    .medium-7,
+    .medium-8,
+    .medium-9,
+    .medium-10,
+    .medium-11,
+    .medium-12 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .medium-12 {
+        width: 100%;
+    }
+
+    .medium-11 {
+        width: 91.66666667%;
+    }
+
+    .medium-10 {
+        width: 83.33333333%;
+    }
+
+    .medium-9 {
+        width: 75%;
+    }
+
+    .medium-8 {
+        width: 66.66666667%;
+    }
+
+    .medium-7 {
+        width: 58.33333333%;
+    }
+
+    .medium-6 {
+        width: 50%;
+    }
+
+    .medium-5 {
+        width: 41.66666667%;
+    }
+
+    .medium-4 {
+        width: 33.33333333%;
+    }
+
+    .medium-3 {
+        width: 25%;
+    }
+
+    .medium-2 {
+        width: 16.66666667%;
+    }
+
+    .medium-1 {
+        width: 8.33333333%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .large-1,
+    .large-2,
+    .large-3,
+    .large-4,
+    .large-5,
+    .large-6,
+    .large-7,
+    .large-8,
+    .large-9,
+    .large-10,
+    .large-11,
+    .large-12 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .large-12 {
+        width: 100%;
+    }
+
+    .large-11 {
+        width: 91.66666667%;
+    }
+
+    .large-10 {
+        width: 83.33333333%;
+    }
+
+    .large-9 {
+        width: 75%;
+    }
+
+    .large-8 {
+        width: 66.66666667%;
+    }
+
+    .large-7 {
+        width: 58.33333333%;
+    }
+
+    .large-6 {
+        width: 50%;
+    }
+
+    .large-5 {
+        width: 41.66666667%;
+    }
+
+    .large-4 {
+        width: 33.33333333%;
+    }
+
+    .large-3 {
+        width: 25%;
+    }
+
+    .large-2 {
+        width: 16.66666667%;
+    }
+
+    .large-1 {
+        width: 8.33333333%;
+    }
+}
+
+
+/***** Media queries *****/
+
+@media screen and (max-width: 767px) {
+    .non-display-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .non-display {
+        display: none;
+    }
+
+    h1 {
+        font-size: 56px;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 400;
+        padding-left: 0;
+    }
+
+    h3 {
+        margin: 10px 5px;
+        font-size: 36px;
+    }
+
+    p {
+        margin: 0 0 10px 5px;
+    }
+
+    .container {
+        width: 750px;
+    }
+
+    header {
+        padding-top: 20px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 36px;
+        padding: 40px 10px 5px;
+    }
+
+    article {
+        text-align: center;
+    }
+
+    .social {
+        text-align: right;
+    }
+
+    .social-link {
+        padding: 0 10px 0 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-weight: 100;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    a:hover,
+    a:focus {
+        -moz-transition: color 0.2s ease-out;
+        -webkit-transition: color 0.2s ease-out;
+        transition: color 0.2s ease-out;
+    }
+
+    .container {
+        width: 970px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}

@@ -1,0 +1,1450 @@
+/*  The animation is this one: http://tympanus.net/codrops/2012/01/10/animated-web-banners-with-css3/ */
+/* I customized it and made the responsive part, but I didn't do all the animation from scratch. */
+
+/* The cute whale and octopus are from http://www.freepik.com/free-vector/marine-icons-of-summer_774500.htm */
+
+.animation {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.content {
+    width: 400px;
+    float: right;
+    margin: 30px 20px;
+    text-align: right;
+    z-index: 4;
+    position: relative;
+    overflow: visible;
+}
+
+    .content h2 {
+        font: 32px "Roboto", cursive;
+        color: #006064;
+        line-height: 40px;
+        text-shadow: 0px 0px 4px #fff;
+        -webkit-animation: h2-animation 7s 1 ease-in-out;
+        -moz-animation: h2-animation 7s 1 ease-in-out;
+        -o-animation: h2-animation 7s 1 ease-in-out;
+        -ms-animation: h2-animation 7s 1 ease-in-out;
+        animation: h2-animation 7s 1 ease-in-out;
+    }
+
+    .content h3 {
+        font: 26px "Roboto", cursive;
+        font-weight: 300;
+        color: #202224;
+        line-height: 31px;
+        text-shadow: 0px 0px 4px #fff;
+        -webkit-animation: h3-animation 10s 1 ease-in-out;
+        -moz-animation: h3-animation 10s 1 ease-in-out;
+        -o-animation: h3-animation 10s 1 ease-in-out;
+        -ms-animation: h3-animation 10s 1 ease-in-out;
+        animation: h3-animation 10s 1 ease-in-out;
+    }
+
+.water-back {
+    width: 120%;
+    height: 84px;
+    background: url(../img/animation/water-back.png) repeat-x;
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    -webkit-animation: water-back-animation 3s infinite ease-in-out;
+    -moz-animation: water-back-animation 3s infinite ease-in-out;
+    -o-animation: water-back-animation 3s infinite ease-in-out;
+    -ms-animation: water-back-animation 3s infinite ease-in-out;
+    animation: water-back-animation 3s infinite ease-in-out;
+}
+
+.water-front {
+    width: 120%;
+    height: 152px;
+    background: url(../img/animation/water-front.png) repeat-x;
+    z-index: 3;
+    position: absolute;
+    bottom: -70px;
+    left: -30px;
+    -webkit-animation: water-front-animation 2s infinite ease-in-out;
+    -moz-animation: water-front-animation 2s infinite ease-in-out;
+    -o-animation: water-front-animation 2s infinite ease-in-out;
+    -ms-animation: water-front-animation 2s infinite ease-in-out;
+    animation: water-front-animation 2s infinite ease-in-out;
+}
+
+.octopus {
+    width: 105px;
+    height: 178px;
+    z-index: 2;
+    position: absolute;
+    bottom: -55px;
+    left: 30px;
+    overflow: visible;
+    -webkit-animation: octopus-in-animation 11s 1 ease-out;
+    -moz-animation: octopus-in-animation 11s 1 ease-out;
+    -o-animation: octopus-in-animation 11s 1 ease-out;
+    -ms-animation: octopus-in-animation 11s 1 ease-out;
+    animation: octopus-in-animation 11s 1 ease-out;
+}
+
+    .octopus li {
+        width: 105px;
+        height: 178px;
+        background: url(../img/animation/pop.png) no-repeat;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        overflow: visible;
+        -webkit-animation: octopus-animation 2s infinite ease-in-out;
+        -moz-animation: octopus-animation 2s infinite ease-in-out;
+        -o-animation: octopus-animation 2s infinite ease-in-out;
+        -ms-animation: octopus-animation 2s infinite ease-in-out;
+        animation: octopus-animation 2s infinite ease-in-out;
+    }
+
+        .octopus li .heart {
+            font-size: 18px;
+            width: 20px;
+            margin: 0px 0 0 90px;
+            text-align: center;
+            z-index: 4;
+            position: relative;
+            overflow: visible;
+        }
+
+            .octopus li .heart i {
+                color: hotpink;
+                -webkit-animation: i-animation 19s 1 ease-in-out;
+                -moz-animation: i-animation 19s 1 ease-in-out;
+                -o-animation: i-animation 19s 1 ease-in-out;
+                -ms-animation: i-animation 19s 1 ease-in-out;
+                animation: i-animation 19s 1 ease-in-out;
+            }
+
+.whale {
+    width: 173px;
+    height: 109px;
+    z-index: 1;
+    position: absolute;
+    bottom: 35px;
+    right: 300px;
+    overflow: visible;
+    -webkit-animation: whale-in-animation 15s 1 ease-out;
+    -moz-animation: whale-in-animation 15s 1 ease-out;
+    -o-animation: whale-in-animation 15s 1 ease-out;
+    -ms-animation: whale-in-animation 15s 1 ease-out;
+    animation: whale-in-animation 15s 1 ease-out;
+}
+
+    .whale li {
+        width: 173px;
+        height: 109px;
+        background: url(../img/animation/balena.png) no-repeat;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        overflow: visible;
+        -webkit-animation: whale-animation 2s infinite ease-in-out;
+        -moz-animation: whale-animation 2s infinite ease-in-out;
+        -o-animation: whale-animation 2s infinite ease-in-out;
+        -ms-animation: whale-animation 2s infinite ease-in-out;
+        animation: whale-animation 2s infinite ease-in-out;
+    }
+
+        .whale li .heart {
+            font-size: 18px;
+            width: 20px;
+            margin: 5px 0px 0 2px;
+            text-align: center;
+            z-index: 4;
+            position: relative;
+            overflow: visible;
+        }
+
+            .whale li .heart i {
+                color: hotpink;
+                -webkit-animation: i-animation 19s 1 ease-in-out;
+                -moz-animation: i-animation 19s 1 ease-in-out;
+                -o-animation: i-animation 19s 1 ease-in-out;
+                -ms-animation: i-animation 19s 1 ease-in-out;
+                animation: i-animation 19s 1 ease-in-out;
+            }
+
+.clouds {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+.cloud-group-1 {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    -webkit-animation: cloud-group-1-animation 30s infinite linear;
+    -moz-animation: cloud-group-1-animation 30s infinite linear;
+    -o-animation: cloud-group-1-animation 30s infinite linear;
+    -ms-animation: cloud-group-1-animation 30s infinite linear;
+    animation: cloud-group-1-animation 30s infinite linear;
+}
+
+.cloud-group-2 {
+    width: 100%;
+    position: absolute;
+    left: 720px;
+    -webkit-animation: cloud-group-2-animation 30s infinite linear;
+    -moz-animation: cloud-group-2-animation 30s infinite linear;
+    -o-animation: cloud-group-2-animation 30s infinite linear;
+    -ms-animation: cloud-group-2-animation 30s infinite linear;
+    animation: cloud-group-2-animation 30s infinite linear;
+}
+
+.cloud-group-3 {
+    width: 100%;
+    position: absolute;
+    left: 1440px;
+    -webkit-animation: cloud-group-3-animation 30s infinite linear;
+    -moz-animation: cloud-group-3-animation 30s infinite linear;
+    -o-animation: cloud-group-3-animation 30s infinite linear;
+    -ms-animation: cloud-group-3-animation 30s infinite linear;
+    animation: cloud-group-3-animation 30s infinite linear;
+}
+
+.cloud-1 {
+    width: 172px;
+    height: 121px;
+    background: url(../img/animation/cloud-1.png) no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+.cloud-2 {
+    width: 121px;
+    height: 75px;
+    background: url(../img/animation/cloud-2.png) no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+
+.cloud-3 {
+    width: 132px;
+    height: 105px;
+    background: url(../img/animation/cloud-3.png) no-repeat;
+    position: absolute;
+    top: -5px;
+    left: 530px;
+}
+
+
+/****** WebKit Animations ********/
+@-webkit-keyframes h2-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes h3-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes i-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes octopus-in-animation {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+@-webkit-keyframes octopus-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes whale-in-animation {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 300px;
+    }
+}
+
+@-webkit-keyframes whale-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes cloud-group-1-animation {
+    0% {
+        left: 0px;
+    }
+
+    99.9999% {
+        left: -720px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes cloud-group-2-animation {
+    0% {
+        left: 720px;
+    }
+
+    99.9999% {
+        left: 0px;
+    }
+
+    100% {
+        left: 720px;
+    }
+}
+
+@-webkit-keyframes cloud-group-3-animation {
+    0% {
+        left: 1440px;
+    }
+
+    99.9999% {
+        left: 720px;
+    }
+
+    100% {
+        left: 1440px;
+    }
+}
+
+@-webkit-keyframes water-back-animation {
+    0% {
+        bottom: 10px;
+        left: -20px;
+    }
+
+    25% {
+        bottom: 8px;
+        left: -22px;
+    }
+
+    70% {
+        bottom: 12px;
+        left: -24px;
+    }
+
+    100% {
+        bottom: 9px;
+        left: -20px;
+    }
+}
+
+@-webkit-keyframes water-front-animation {
+    0% {
+        bottom: -70px;
+        left: -30px;
+    }
+
+    25% {
+        bottom: -68px;
+        left: -32px;
+    }
+
+    70% {
+        bottom: -72px;
+        left: -34px;
+    }
+
+    100% {
+        bottom: -69px;
+        left: -30px;
+    }
+}
+
+/* FireFox Animations */
+@-moz-keyframes h2-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes h3-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes i-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes octopus-in-animation {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+@-moz-keyframes octopus-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-moz-keyframes whale-in-animation {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 300px;
+    }
+}
+
+@-moz-keyframes whale-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-moz-keyframes cloud-group-1-animation {
+    0% {
+        left: 0px;
+    }
+
+    99.9999% {
+        left: -720px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@-moz-keyframes cloud-group-2-animation {
+    0% {
+        left: 720px;
+    }
+
+    99.9999% {
+        left: 0px;
+    }
+
+    100% {
+        left: 720px;
+    }
+}
+
+@-moz-keyframes cloud-group-3-animation {
+    0% {
+        left: 1440px;
+    }
+
+    99.9999% {
+        left: 720px;
+    }
+
+    100% {
+        left: 1440px;
+    }
+}
+
+@-moz-keyframes water-back-animation {
+    0% {
+        bottom: 10px;
+        left: -20px;
+    }
+
+    25% {
+        bottom: 8px;
+        left: -22px;
+    }
+
+    70% {
+        bottom: 12px;
+        left: -24px;
+    }
+
+    100% {
+        bottom: 9px;
+        left: -20px;
+    }
+}
+
+@-moz-keyframes water-front-animation {
+    0% {
+        bottom: -70px;
+        left: -30px;
+    }
+
+    25% {
+        bottom: -68px;
+        left: -32px;
+    }
+
+    70% {
+        bottom: -72px;
+        left: -34px;
+    }
+
+    100% {
+        bottom: -69px;
+        left: -30px;
+    }
+}
+
+/* Opera Animations */
+@-o-keyframes h2-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes h3-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes i-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes octopus-in-animation {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+@-o-keyframes octopus-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-o-keyframes whale-in-animation {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 300px;
+    }
+}
+
+@-o-keyframes whale-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-o-keyframes cloud-group-1-animation {
+    0% {
+        left: 0px;
+    }
+
+    99.9999% {
+        left: -720px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@-o-keyframes cloud-group-2-animation {
+    0% {
+        left: 720px;
+    }
+
+    99.9999% {
+        left: 0px;
+    }
+
+    100% {
+        left: 720px;
+    }
+}
+
+@-o-keyframes cloud-group-3-animation {
+    0% {
+        left: 1440px;
+    }
+
+    99.9999% {
+        left: 720px;
+    }
+
+    100% {
+        left: 1440px;
+    }
+}
+
+@-o-keyframes water-back-animation {
+    0% {
+        bottom: 10px;
+        left: -20px;
+    }
+
+    25% {
+        bottom: 8px;
+        left: -22px;
+    }
+
+    70% {
+        bottom: 12px;
+        left: -24px;
+    }
+
+    100% {
+        bottom: 9px;
+        left: -20px;
+    }
+}
+
+@-o-keyframes water-front-animation {
+    0% {
+        bottom: -70px;
+        left: -30px;
+    }
+
+    25% {
+        bottom: -68px;
+        left: -32px;
+    }
+
+    70% {
+        bottom: -72px;
+        left: -34px;
+    }
+
+    100% {
+        bottom: -69px;
+        left: -30px;
+    }
+}
+
+/* IE Animations */
+@-ms-keyframes h2-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes h3-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes i-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes octopus-in-animation {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+@-ms-keyframes octopus-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-ms-keyframes whale-in-animation {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 300px;
+    }
+}
+
+@-ms-keyframes whale-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@-ms-keyframes cloud-group-1-animation {
+    0% {
+        left: 0px;
+    }
+
+    99.9999% {
+        left: -720px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@-ms-keyframes cloud-group-2-animation {
+    0% {
+        left: 720px;
+    }
+
+    99.9999% {
+        left: 0px;
+    }
+
+    100% {
+        left: 720px;
+    }
+}
+
+@-ms-keyframes cloud-group-3-animation {
+    0% {
+        left: 1440px;
+    }
+
+    99.9999% {
+        left: 720px;
+    }
+
+    100% {
+        left: 1440px;
+    }
+}
+
+@-ms-keyframes water-back-animation {
+    0% {
+        bottom: 10px;
+        left: -20px;
+    }
+
+    25% {
+        bottom: 8px;
+        left: -22px;
+    }
+
+    70% {
+        bottom: 12px;
+        left: -24px;
+    }
+
+    100% {
+        bottom: 9px;
+        left: -20px;
+    }
+}
+
+@-ms-keyframes water-front-animation {
+    0% {
+        bottom: -70px;
+        left: -30px;
+    }
+
+    25% {
+        bottom: -68px;
+        left: -32px;
+    }
+
+    70% {
+        bottom: -72px;
+        left: -34px;
+    }
+
+    100% {
+        bottom: -69px;
+        left: -30px;
+    }
+}
+
+/* Animations */
+@keyframes h2-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes h3-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes i-animation {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes octopus-in-animation {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
+
+@keyframes octopus-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@keyframes whale-in-animation {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 300px;
+    }
+}
+
+@keyframes whale-animation {
+    0% {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    25% {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    70% {
+        bottom: 2px;
+        left: -4px;
+    }
+
+    100% {
+        bottom: -1px;
+        left: 0px;
+    }
+}
+
+@keyframes cloud-group-1-animation {
+    0% {
+        left: 0px;
+    }
+
+    99.9999% {
+        left: -720px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes cloud-group-2-animation {
+    0% {
+        left: 720px;
+    }
+
+    99.9999% {
+        left: 0px;
+    }
+
+    100% {
+        left: 720px;
+    }
+}
+
+@keyframes cloud-group-3-animation {
+    0% {
+        left: 1440px;
+    }
+
+    99.9999% {
+        left: 720px;
+    }
+
+    100% {
+        left: 1440px;
+    }
+}
+
+@keyframes water-back-animation {
+    0% {
+        bottom: 10px;
+        left: -20px;
+    }
+
+    25% {
+        bottom: 8px;
+        left: -22px;
+    }
+
+    70% {
+        bottom: 12px;
+        left: -24px;
+    }
+
+    100% {
+        bottom: 9px;
+        left: -20px;
+    }
+}
+
+@keyframes water-front-animation {
+    0% {
+        bottom: -70px;
+        left: -30px;
+    }
+
+    25% {
+        bottom: -68px;
+        left: -32px;
+    }
+
+    70% {
+        bottom: -72px;
+        left: -34px;
+    }
+
+    100% {
+        bottom: -69px;
+        left: -30px;
+    }
+}
+
+/******* Responsive layout **********/
+/* By default the 768px/tablet version. For mobiles it will not be displayed. */
+
+@media screen and (min-width: 992px) {
+    .content {
+        width: 450px;
+        margin: 40px 50px 0 0;
+    }
+
+        .content h2 {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        .content h3 {
+            font-size: 31px;
+        }
+
+    .octopus {
+        left: 70px;
+    }
+
+    .whale {
+        right: 420px;
+    }
+
+    /****** WebKit Animations ********/
+    @-webkit-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 70px;
+        }
+    }
+
+    @-webkit-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 420px;
+        }
+    }
+    /* FireFox Animations */
+    @-moz-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 70px;
+        }
+    }
+
+    @-moz-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 420px;
+        }
+    }
+    /* Opera Animations */
+    @-o-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 70px;
+        }
+    }
+
+    @-o-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 420px;
+        }
+    }
+    /* IE Animations */
+    @-ms-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 70px;
+        }
+    }
+
+    @-ms-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 420px;
+        }
+    }
+    /* Animations */
+    @keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 70px;
+        }
+    }
+
+    @keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 420px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        margin: 40px 400px 0 0;
+    }
+
+    .octopus {
+        left: 400px;
+    }
+
+    .whale {
+        right: 890px;
+    }
+
+    /****** WebKit Animations ********/
+    @-webkit-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 400px;
+        }
+    }
+
+    @-webkit-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 890px;
+        }
+    }
+    /* FireFox Animations */
+    @-moz-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 400px;
+        }
+    }
+
+    @-moz-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 890px;
+        }
+    }
+    /* Opera Animations */
+    @-o-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 400px;
+        }
+    }
+
+    @-o-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 890px;
+        }
+    }
+    /* IE Animations */
+    @-ms-keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 400px;
+        }
+    }
+
+    @-ms-keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 890px;
+        }
+    }
+    /* Animations */
+    @keyframes octopus-in-animation {
+        0% {
+            left: -200px;
+        }
+
+        100% {
+            left: 400px;
+        }
+    }
+
+    @keyframes whale-in-animation {
+        0% {
+            right: -500px;
+        }
+
+        100% {
+            right: 890px;
+        }
+    }
+}
